@@ -2,4 +2,4 @@
 
 ## Introduction
 
-![stegno](https://github.com/MdNaina/markdown-here/raw/master/stegno.png "Stegnography")
+![stegno](https://github.com/MdNaina/gitdemo/blob/main/stegano.png "Stegnography")
