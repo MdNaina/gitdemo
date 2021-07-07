@@ -17,7 +17,7 @@
      alt="skill"
      style="float:left; margin-right: 10px;"
      width="200"/>
-     <img src="images/e-commerce.jpg"
+     <img src="images/e-commerce.png"
      alt="skill"
      style="float:left; margin-right: 10px;"
      width="200"/>
