@@ -4,5 +4,5 @@
 
 ![stegno][screenshot]
 
-[screenshot] : https://github.com/MdNaina/gitdemo/blob/main/stegano.png "Stegnography"
+[screenshot]: https://github.com/MdNaina/gitdemo/blob/main/stegano.png "Stegnography"
  
