@@ -5,7 +5,7 @@
 ![stegno][screenshot]
 
 ## Screenshot
-<img src="images/skills.png"
+<img src="images/skills.jpg"
      alt="skill"
      style="float:left; margin-right: 10px;"
      width="200"/>
