@@ -8,16 +8,13 @@
 <img src="images/skills.jpg"
      alt="skill"
      style="float:left; margin-right: 10px;"
-     width="200"/>
-     <img src="images/flappy.jpg"
+     width="200"/><img src="images/flappy.jpg"
      alt="skill"
      style="float:left; margin-right: 10px;"
-     width="200"/>
-     <img src="images/todo.jpg"
+     width="200"/><img src="images/todo.jpg"
      alt="skill"
      style="float:left; margin-right: 10px;"
-     width="200"/>
-     <img src="images/e-commerce.png"
+     width="200"/><img src="images/e-commerce.png"
      alt="skill"
      style="float:left; margin-right: 10px;"
      width="200"/>
