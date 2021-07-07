@@ -1,3 +1,3 @@
-# Project
+Alt-Project
 
 ## Introduction
