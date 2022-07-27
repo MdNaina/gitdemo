@@ -1,0 +1,17 @@
+name: Build and Deploy
+
+on: [push]
+
+jobs:
+  runs-on: ubuntu-latest
+  
+  steps:
+    - uses: actions/checkout@v2
+    
+    - name: Setup nodejs enviroment
+      uses: actions/setup-node@v2.1.5
+      with:
+        node-version: 14.x
+    
+    - run: cd client; npm ci
+    - run: cd client; npm run build
