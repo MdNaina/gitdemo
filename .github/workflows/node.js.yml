@@ -24,5 +24,6 @@ jobs:
           pwd
           git add ../server/public
           git commit -m "build by github action"
+          git push origin master
           echo "Complete"
       
