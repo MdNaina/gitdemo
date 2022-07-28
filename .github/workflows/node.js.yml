@@ -16,3 +16,13 @@ jobs:
 
       - run: cd client; npm ci
       - run: cd client; npm run build
+      
+      - name: copy to production branch
+        uses: andstor/copycat-action@v3
+        with:
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          src_path: client/dist
+          src_branch: production
+          dst_path: /public/
+          dst_owner: MdNaina
+          dst_repo_name: gitdemo
