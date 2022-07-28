@@ -14,16 +14,10 @@ jobs:
         with:
           node-version: 14.x
 
-      - run: cd client; npm ci
-      - run: cd client; npm run build
+      - run: |
+          cd client && npm run build && cp -r ./dist ../server/public
+          git config user.name "github-actions[bot]"
+          git config user.email "github.com"
+          git add ../server/public
+          git commit -m "build by github action"
       
-      - name: copy to production branch
-        uses: andstor/copycat-action@v3
-        with:
-          personal_token: ${{ secrets.PERSONAL_TOKEN }}
-          src_path: client/dist
-          src_branch: master
-          dst_branch: production
-          dst_path: /public/
-          dst_owner: MdNaina
-          dst_repo_name: gitdemo
