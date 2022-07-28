@@ -15,7 +15,9 @@ jobs:
           node-version: 14.x
 
       - run: |
-          cd client && npm run build && cp -r ./dist ../server/public
+          cd client
+          npm ci
+          npm run build && cp -r ./dist ../server/public
           git config user.name "github-actions[bot]"
           git config user.email "github.com"
           git add ../server/public
