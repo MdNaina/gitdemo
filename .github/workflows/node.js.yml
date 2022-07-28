@@ -16,10 +16,13 @@ jobs:
 
       - run: |
           cd client
+          pwd
           npm ci
           npm run build && cp -r ./dist ../server/public
           git config user.name "github-actions[bot]"
           git config user.email "github.com"
+          pwd
           git add ../server/public
           git commit -m "build by github action"
+          echo "Complete"
       
