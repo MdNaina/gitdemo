@@ -22,7 +22,8 @@ jobs:
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
           src_path: client/dist
-          src_branch: production
+          src_branch: master
+          dst_branch: production
           dst_path: /public/
           dst_owner: MdNaina
           dst_repo_name: gitdemo
