@@ -30,7 +30,7 @@ jobs:
           cp -rf client/dist/* server/public
           git config user.name "github-actions[bot]"
           git config user.email "github.com"
-          git add server/public
+          git add -f server/public
           git status
           git commit -m "build by github action"
           git push origin master
