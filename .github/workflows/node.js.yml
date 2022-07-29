@@ -14,23 +14,28 @@ jobs:
         with:
           node-version: 14.x
 
-      - name: Building
+      - name: Building client
+        working-directory: client
         run: |
-          cd client
           pwd
           npm ci
           rm -r ./dist || echo "no old build folder was found"
-          rm -r ../server/public/* || echo "no api public build folder was found"
           npm run build
-          cp -rf ./dist/* ../server/public/
+          echo "Complete"
+          
+      - name: Building Server
+        run: |
+          pwd
+          rm -r server/public/* || echo "no api public build folder was found"
+          cp -rf client/dist/* server/public
           git config user.name "github-actions[bot]"
           git config user.email "github.com"
-          pwd
-          git add ../server/public
+          git add server/public
           git status
           git commit -m "build by github action"
           git push origin master
-          echo "Complete"
+          
+          
           
       - name: copy to production branch
         uses: andstor/copycat-action@v3
