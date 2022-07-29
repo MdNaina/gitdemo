@@ -21,7 +21,8 @@ jobs:
           npm ci
           rm -r ./dist || echo "no old build folder was found"
           rm -r ../server/public/* || echo "no api public build folder was found"
-          npm run build && cp -rf ./dist/* ../server/public
+          npm run build
+          cp -rf ./dist/* ../server/public/
           git config user.name "github-actions[bot]"
           git config user.email "github.com"
           pwd
