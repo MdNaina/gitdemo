@@ -19,6 +19,8 @@ jobs:
           cd client
           pwd
           npm ci
+          rm -r ./dist
+          rm -r ../server/public/*
           npm run build && cp -rf ./dist/* ../server/public
           git config user.name "github-actions[bot]"
           git config user.email "github.com"
