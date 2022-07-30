@@ -30,10 +30,12 @@ jobs:
           cp -rf client/dist/* server/public
           git config user.name "github-actions[bot]"
           git config user.email "github.com"
-          git add -f server/public
+          git checkout --orphan temp
+          git rm --cached -r .
+          git add server/
           git status
           git commit -m "build by github action"
-          git push origin master
+          git push origin temp
           
           
           
@@ -42,9 +44,13 @@ jobs:
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
           src_path: /server/.
-          src_branch: master
+          src_branch: temp
           dst_branch: production
           dst_path: /
           dst_owner: MdNaina
           dst_repo_name: gitdemo
+          
+      - name: Reseting branchs
+        run: |
+          git push origin --delete temp
       
