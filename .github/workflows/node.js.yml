@@ -53,4 +53,5 @@ jobs:
       - name: Reseting branchs
         run: |
           git push origin --delete temp
+          echo "Reset Complete"
       
