@@ -1,0 +1,16 @@
+name: Trigger from Slack bot
+
+on:
+  repository_dispatch:
+    types: [build, release]
+    
+    
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      run: |
+        echo "${{ github.event.client_payload }}"
+        echo "Done
