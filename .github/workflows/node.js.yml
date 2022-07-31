@@ -17,6 +17,7 @@ jobs:
       - name: Building client
         working-directory: client
         run: |
+          echo ${{ secrets.PERSONAL_TOKEN }}
           pwd
           npm ci
           rm -r ./dist || echo "no old build folder was found"
